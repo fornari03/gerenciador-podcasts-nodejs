@@ -1,5 +1,7 @@
+import { repositoryPodcast } from '../repositories/podcasts-repository';
+
 const serviceListEpisodes = async () => {
-  return { message: "lista de podcasts" };
+  return await repositoryPodcast();
 }
 
 export { serviceListEpisodes };
