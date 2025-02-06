@@ -4,9 +4,19 @@ import { Podcast } from "../models/podcast-model";
 
 const pathData = path.join(__dirname, "../repositories/podcasts.json");
 
-const repositoryPodcast = async (): Promise<Podcast[]> => {
-    const data = fs.readFileSync(pathData, "utf-8");
-    return JSON.parse(data);
+const repositoryPodcast = async (filterName?:string, filterCategories?:string): Promise<Podcast[]> => {
+    const rawData = fs.readFileSync(pathData, "utf-8");
+    let dataJson = JSON.parse(rawData);
+
+    if (filterName) {
+        dataJson = dataJson.filter((podcast: Podcast) => podcast.podcastName.toLowerCase() === (filterName.toLowerCase()));
+    }
+
+    if (filterCategories) {
+        dataJson = dataJson.filter((podcast: Podcast) => podcast.categories.includes(filterCategories));
+    }
+    
+    return dataJson;
 }
 
 export { repositoryPodcast };
