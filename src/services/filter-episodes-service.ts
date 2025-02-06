@@ -1,5 +1,4 @@
 import { repositoryPodcast } from '../repositories/podcasts-repository';
-import { FilterOptions } from '../models/filter-podcast-model';
 import { PodcastsDTO } from '../models/podcasts-DTO';
 import { StatusCode } from '../utils/status-code';
 
