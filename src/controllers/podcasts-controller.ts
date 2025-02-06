@@ -5,13 +5,17 @@ import { StatusCode } from "../utils/status-code";
 import { ContentType } from "../utils/content-types";
 
 const getListEpisodes = async (req: IncomingMessage, res: ServerResponse) => {
-    res.writeHead(StatusCode.OK, { "Content-Type": ContentType.JSON }); // head
-    res.end(JSON.stringify(await serviceListEpisodes())); // content
+    const content = await serviceListEpisodes();
+    res.writeHead(content.statusCode, { "Content-Type": ContentType.JSON }); // head
+    res.write(JSON.stringify(content.body)); // content
+    res.end(); // fim
 }
 
 const getFilterEpisodes = async (req: IncomingMessage, res: ServerResponse) => {
-    res.writeHead(StatusCode.OK, { "Content-Type": ContentType.JSON }); // head
-    res.end(JSON.stringify(await serviceFilterEpisodes(req.url))); // content
+    const content = await serviceFilterEpisodes(req.url);
+    res.writeHead(content.statusCode, { "Content-Type": ContentType.JSON }); // head
+    res.write(JSON.stringify(content.body)); // content
+    res.end(); // fim
 }
 
 
