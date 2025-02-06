@@ -11,6 +11,20 @@
         "episode": "RAFAEL GRATTA - Flow #408",
         "videoId": "Z38tcbrvFow",
         "categories": ["saude"]
+    },
+
+    {
+        "podcastName": "Podpah",
+        "episode": "NATTAN - Podpah #876",
+        "videoId": "VyvNQt26how",
+        "categories": ["musica", "humor"]
+    },
+
+    {
+        "podcastName": "Inteligencia+Ltda",
+        "episode": "CAMPEÕES DA RESENHA: VAMPETA E RICK BOLZANI - Inteligência Ltda. Podcast #1426",
+        "videoId": "rkhSB09HGMM",
+        "categories": ["esporte", "humor"]
     }
 
 ]
