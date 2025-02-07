@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fornari03/gerenciador-podcasts-nodejs.git"
+    "url": "git+https://github.com/fornari03/podcasts-manager-nodejs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fornari03/gerenciador-podcasts-nodejs/issues"
+    "url": "https://github.com/fornari03/podcasts-manager-nodejs/issues"
   },
-  "homepage": "https://github.com/fornari03/gerenciador-podcasts-nodejs#readme",
+  "homepage": "https://github.com/fornari03/podcasts-manager-nodejs#readme",
   "devDependencies": {
     "@types/node": "^22.13.1",
     "tsup": "^8.3.6",
